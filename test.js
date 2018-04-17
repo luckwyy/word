@@ -43,7 +43,7 @@ http.get(url, (res) => {
   res.on('end', () => {
     try {
       const parsedData = JSON.parse(rawData);
-      console.log(parsedData);
+      console.log(parsedData.basic.explains[0]);
     } catch (e) {
       console.error(e.message);
     }
