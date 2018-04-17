@@ -6,8 +6,8 @@ var q = 'begin';
 var from = 'EN';
 var to = 'zh-CHS';
 var salt = Math.random();
-var appKey = '7122525dce1a80df';
-var secureKey = 'ta9GYAsEWDd9dfY2PdCil7AjfPZEK1jP';
+var appKey = '';
+var secureKey = '';
 
 //开始清空文件
 
