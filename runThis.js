@@ -19,7 +19,9 @@ fs.writeFile('result.txt','',{flag:'w',encoding:'utf-8',mode:'0666'},function(er
     }
 });
 
-// 异步读取// 同步读取
+/**
+ * 读取文件
+ */
 var data = fs.readFileSync('yourWord.txt');
 //匹配换行符
 data = data.toString().split('\r\n');
@@ -70,7 +72,9 @@ for(var i = 0;i<data.length;i++){
 
             console.log(strP);
 
-            //写入文件加上换行符 a 追加
+            /**
+             * 追加文件
+             */
             fs.writeFile('result.txt',strP+'\n',{flag:'a',encoding:'utf-8',mode:'0666'},function(err){
                 if(err){
                     console.log("文件写入失败")
@@ -87,7 +91,6 @@ for(var i = 0;i<data.length;i++){
         }).on('error', (e) => {
         console.error(`错误: ${e.message}`);
         });
-
 
 
     })();
